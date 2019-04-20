@@ -51,55 +51,65 @@ body{
          <div class="jumbotron">
              <h1 id="marvel"></h1>
              <p class="mid">MARVEL</p>
-
-            <button type="button" onclick="javascript:PlaySound('assets/audio/smash.mp3');" data-name="Hulk" class="hero-btn btn btn-outline-success playSound">Hulk</button>
-            <button type="button" onclick="javascript:PlaySound('assets/audio/petty.mp3');" data-name="Thor" class="hero-btn btn btn-outline-warning playSound">Thor</button>
-            <button type="button" onclick="javascript:PlaySound('assets/audio/decoy.mp3');" data-name="Iron Man" class="hero-btn btn btn-outline-danger playSound">Iron Man</button>
-            <button type="button" onclick="javascript:PlaySound('assets/audio/fondue.mp3');" data-name="captain america" class="hero-btn btn btn-outline-primary captain">Captain America</button>
-            <button type="button" onclick="javascript:PlaySound('assets/audio/WakandaForever.mp3');" data-name="Black Panther" class="hero-btn btn btn-outline-warning playSound">Black Panther</button>
-            <button type="button" onclick="javascript:PlaySound('assets/audio/groot.mp3');" data-name="Groot" class="hero-btn btn btn-outline-info playSound">I Am Groot</button>
-            <button type="button" onclick="javascript:PlaySound('assets/audio/mrDoctor.mp3');" data-name="Dcotor Strange" class="hero-btn btn btn-outline-primary playSound">Doctor Strange</button>
-            <button type="button" onclick="javascript:PlaySound('assets/audio/spider-man_great.wav');" data-name="Spiderman" class="hero-btn btn btn-outline-danger playSound">Spiderman</button>
-
+         <div class="row">
+                <div class="col-xs">
+                        <button type="button" onclick="javascript:PlaySound('assets/audio/smash.mp3');" data-name="Hulk" class="hero-btn btn btn-outline-success playSound">Hulk</button>
+                        <button type="button" onclick="javascript:PlaySound('assets/audio/petty.mp3');" data-name="Thor" class="hero-btn btn btn-outline-warning playSound">Thor</button>
+                        <button type="button" onclick="javascript:PlaySound('assets/audio/decoy.mp3');" data-name="Iron Man" class="hero-btn btn btn-outline-danger playSound">Iron Man</button>
+                        <button type="button" onclick="javascript:PlaySound('assets/audio/fondue.mp3');" data-name="captain america" class="hero-btn btn btn-outline-primary captain">Captain America</button>
+                        <button type="button" onclick="javascript:PlaySound('assets/audio/WakandaForever.mp3');" data-name="Black Panther" class="hero-btn btn btn-outline-warning playSound">Black Panther</button>
+                        <button type="button" onclick="javascript:PlaySound('assets/audio/groot.mp3');" data-name="Groot" class="hero-btn btn btn-outline-info playSound">I Am Groot</button>
+                        <button type="button" onclick="javascript:PlaySound('assets/audio/mrDoctor.mp3');" data-name="Dcotor Strange" class="hero-btn btn btn-outline-primary playSound">Doctor Strange</button>
+                        <button type="button" onclick="javascript:PlaySound('assets/audio/spider-man_great.wav');" data-name="Spiderman" class="hero-btn btn btn-outline-danger playSound">Spiderman</button>
+                </div>
+        </div>
             <hr>
     
-            <div id="new-buttons"></div>
+        <!-- new Buttons will go Here  -->
+        <div class="row">
+                <div id="new-buttons" class="col-xs"></div>
+        </div>
 
-            <br>
+        <br>
 
             
-        <!-- new Buttons will go Here  -->
         <br>
 
 
-        <div class="card">
-                <div class="card-header">
-                        Add A Hero...Or A Villian
-                </div>
+
+
+        <div class="card row">
+            <div class="col-xs card-header">
+                     Add A Hero...Or A Villian
+            </div>
                 <div class="card-body">
                         <form id="hero-form">
                                 <label for="hero-input"></label>
                                 <input type="text" id="hero-input">
                                 <br>
-                        
                                 <!-- Button triggers new hero to be added -->
                                 <input id="add" type="submit" value="Submit">
-                              </form>
+                        </form>
                 </div>
+        
         </div>
+
+
+
+
 
 
     
 
         <div class="container">
             <div id="heroesGoHere" class="row">
-                  <div class="col-sm">
+                  <div class="col-xs">
 
                   </div>
-                  <div class="col-sm">
+                  <div class="col-xs">
 
                   </div>
-                  <div class="col-sm">
+                  <div class="col-xs">
 
                   </div>
             </div>

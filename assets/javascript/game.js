@@ -24,20 +24,20 @@
         console.log(response);
         for(var i=0; i<response.data.length;i++){
 
-            var heroDiv = $('<div>')
-            rating = $('<p>').text("Rating: "+response.data[i].rating);
-            heroImage = $("<img>")
-            heroImage.addClass("gif")
-            heroImage.attr({
-                            src: response.data[i].images.downsized_still.url, 
-                            dataAnimate: response.data[i].images.downsized.url,
-                            dataStill: response.data[i].images.downsized_still.url, 
-                            dataState: "still"
-                            });
+        var heroDiv = $('<div>')
+        rating = $('<p>').text("Rating: "+response.data[i].rating);
+        heroImage = $("<img>")
+        heroImage.addClass("gif")
+        heroImage.attr({
+                        src: response.data[i].images.downsized_still.url, 
+                        dataAnimate: response.data[i].images.downsized.url,
+                        dataStill: response.data[i].images.downsized_still.url, 
+                        dataState: "still"
+                        });
     
-            heroDiv.append(heroImage);
-            heroDiv.append(rating);
-            $("#heroesGoHere").prepend(heroDiv);
+        heroDiv.append(heroImage);
+        heroDiv.append(rating);
+        $("#heroesGoHere").prepend(heroDiv);
         }
     });
 
@@ -87,7 +87,7 @@
     //      obj.src = "audio/petty.mp3";
     //      obj.volume = 0.10;
     //      obj.autoPlay = false;
-    //    obj.preLoad = true;
+    //      obj.preLoad = true;
     //      obj.controls = true;
       
     //     $(".playSound").click(function() {
