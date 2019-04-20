@@ -1,5 +1,7 @@
 # GifTastic
 ###Link to demo: https://iamjayy.github.io/GifTastic/
+<hr>
+
 <strong>Technology Used:</strong>
 -HTML
 -CSS3
