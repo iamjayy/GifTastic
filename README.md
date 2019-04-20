@@ -4,13 +4,18 @@
 
 <strong>Technology Used:</strong>
 -HTML
--CSS3
--JavaScript
--Jquery
--Bootstrap
+<br>
 -Google Font
+<br>
 -Giphy API
-
+<br>
+-Jquery
+<br>
+-Bootstrap
+<br>
+-CSS3 
+<br>
+-JavaScript 
 <hr>
 
 <strong>Instructions</strong>
