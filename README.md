@@ -3,6 +3,7 @@
 <hr>
 
 <strong>Technology Used:</strong>
+<br>
 -HTML
 <br>
 -Google Font
