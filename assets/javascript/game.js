@@ -23,15 +23,15 @@
     .done(function(response) {
         console.log(response);
         for(var i=0; i<response.data.length;i++){
-
-        var heroDiv = $('<div>')
-        rating = $('<p>').text("Rating: "+response.data[i].rating);
+        var results = response.data
+        heroDiv = $('<div>')
+        rating = $('<p>').text("Rating: "+results[i].rating);
         heroImage = $("<img>")
         heroImage.addClass("gif")
         heroImage.attr({
-                        src: response.data[i].images.downsized_still.url, 
-                        dataAnimate: response.data[i].images.downsized.url,
-                        dataStill: response.data[i].images.downsized_still.url, 
+                        src: results[i].images.downsized_still.url, 
+                        dataAnimate: results[i].images.downsized.url,
+                        dataStill: results[i].images.downsized_still.url, 
                         dataState: "still"
                      });
         //append ratings and images to div
