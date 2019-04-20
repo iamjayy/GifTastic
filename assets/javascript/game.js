@@ -29,19 +29,19 @@
         heroImage = $("<img>")
         heroImage.addClass("gif")
         heroImage.attr({
-                        src: response.data[i].images.downsized_still.url, 
-                        dataAnimate: response.data[i].images.downsized.url,
-                        dataStill: response.data[i].images.downsized_still.url, 
+                        src: response.data[i].images.fixed_height.url, 
+                        dataAnimate: response.data[i].images.fixed_height.url,
+                        dataStill: response.data[i].images.fixed_height.url, 
                         dataState: "still"
-                        });
-    
+                     });
+        //append ratings and images to div
         heroDiv.append(heroImage);
         heroDiv.append(rating);
         $("#heroesGoHere").prepend(heroDiv);
         }
     });
 
- }//closing bracket function displayHeros
+ }   //closing bracket function displayHeros
 
 
     //function to animate gif
@@ -62,10 +62,10 @@
     function renderButtons() {
 
      $("#new-buttons").empty();
-         //for loop 8 for new buttons, not zero or else same buttons will repeat
+        //for loop 8 for new buttons, not zero or else same buttons will repeat
         for (var i = 8; i < heros.length; i++) {
         var button = $("<button>");
-        button.addClass("hero-btn");
+        button.addClass("btn btn-primary hero-btn");
         button.attr("data-name", heros[i]);
         button.text(heros[i]);
         $("#new-buttons").append(button);
@@ -99,10 +99,6 @@
     //       obj.pause();
     //       });
     //   });
-
-
-
-
 
     // This function handles events where a button is clicked
     $("#add").on("click", function(event) {
