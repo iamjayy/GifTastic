@@ -29,9 +29,9 @@
         heroImage = $("<img>")
         heroImage.addClass("gif")
         heroImage.attr({
-                        src: response.data[i].images.fixed_height.url, 
-                        dataAnimate: response.data[i].images.fixed_height.url,
-                        dataStill: response.data[i].images.fixed_height.url, 
+                        src: response.data[i].images.downsized_still.url, 
+                        dataAnimate: response.data[i].images.downsized.url,
+                        dataStill: response.data[i].images.downsized_still.url, 
                         dataState: "still"
                      });
         //append ratings and images to div
