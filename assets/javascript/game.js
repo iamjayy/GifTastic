@@ -21,19 +21,21 @@
             method: "GET"
            })
     .done(function(response) {
-        console.log(response);
         for(var i=0; i<response.data.length;i++){
+
         var results = response.data
+
         heroDiv = $('<div>')
+
         rating = $('<p>').text("Rating: "+results[i].rating);
         heroImage = $("<img>")
         heroImage.addClass("gif")
-        heroImage.attr({
-                        src: results[i].images.downsized_still.url, 
-                        dataAnimate: results[i].images.downsized.url,
-                        dataStill: results[i].images.downsized_still.url, 
-                        dataState: "still"
-                     });
+        heroImage.attr("src", results[i].images.original_still.url);
+        heroImage.attr("data-still", results[i].images.original_still.url);
+        heroImage.attr("data-animate", results[i].images.original.url);
+        heroImage.attr("data-state", "still");
+        heroImage.attr("class", "gif");
+
         //append ratings and images to div
         heroDiv.append(heroImage);
         heroDiv.append(rating);
@@ -46,15 +48,19 @@
 
     //function to animate gif
     $(document).on("click", ".gif",  function animate() {  
-    var state = $(this).attr("dataState");
+		state = $(this).attr("data-state");
+		animateImage = $(this).attr("data-animate");
+		stillImage = $(this).attr("data-still");
 
-    if (state === "still") {
-        $(this).attr("src", $(this).attr("dataAnimate"));
-        $(this).attr("dataState", "animate");
-    }else {
-        $(this).attr("src", $(this).attr("dataAnimate"));
-        $(this).attr("dataState", "animate");
-      }
+		if (state == "still") {
+			$(this).attr("src", animateImage);
+			$(this).attr("data-state", "animate");
+		}
+
+		else if (state == "animate") {
+			$(this).attr("src", stillImage);
+            $(this).attr("data-state", "still");
+        }
     });
 
 
